@@ -8,21 +8,27 @@ The two machine learning models that I used were Random Forest and Easy Ensemble
 ## Results:
 
 ![imbalanced](https://user-images.githubusercontent.com/46951897/144204515-9579d806-b102-47d8-a911-e00356172358.png)
+
 The Naive Random Oversampling classification report demonstrates a high precision for low-risk and a decent precision and recall for high-risk credit, howeverm the precision for high-risk credit is almost 0 makeing it a poor predictor as it overchooses false positives.
 
-![smote_oversample](https://user-images.githubusercontent.com/46951897/144205487-1c115764-0bd3-49c0-a2cb-5e07b2f3cbe9.png)
+![smote_over](https://user-images.githubusercontent.com/46951897/144374197-35c267d0-5d20-4ae9-94ae-86665bf8a666.png)
+
 For the SMOTE oversampling classification report, it shows similar results but has a slightly better recall for high risk and lower recall for low-risk. In addition, the precision for high and low-risk remained the same, so overall it is still not a great predictor.
 
 ![undersample](https://user-images.githubusercontent.com/46951897/144206097-395c860d-014d-4032-9e28-babde4d1d486.png)
+
 For undersampling, we see that the precision remains the same as before for low and high-risk, but recall for both low and high-risk credit also went down.
 
 ![over_under_sample](https://user-images.githubusercontent.com/46951897/144371615-fd7d0291-550b-440e-bbfe-521c44f88e26.png)
+
 Here, we observe that the combination of over and undersampling yields the same results as oversampling by itself, the recall is .75 for high risk credit, but the precision is yet again at .01 which makes it unreliable for picking only true positive high-risk data points.
 
 ![random_forest](https://user-images.githubusercontent.com/46951897/144371145-e50e507b-2995-4e95-a7de-80186ce7674d.png)
+
 Using the random forest model reveals that the precision is 0.01 greater than the prior models, which is technically a 100% increase in the precision. However, it is still very low and the recall for high risk is slightly less than the recall rates from prior reports, but the recall for low-risk is slightly higher at over 0.8. However, we are looking for better indicators for denying credit, so the model may still be a little unreliable.
 
 ![easy_ensemble](https://user-images.githubusercontent.com/46951897/144372000-ceb1197b-427a-4b44-8d3c-74eb808ebc57.png)
+
 Lastly, the easy ensemble also had a 0.02 precision for high-credit, but both recalls for high and low-credit were much more reliable as they both had over 0.7. This seems to make it the most reliable machine learning model.
 
 ## Summary:
